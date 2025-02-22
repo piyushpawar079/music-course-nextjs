@@ -32,13 +32,13 @@ export const MenuItem = ({
       >
         {item}
       </motion.p>
-      {active !== null && children && (
+      {active !== null  && (
         <motion.div
           initial={{ opacity: 0, scale: 0.85, y: 10 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={transition}
         >
-          {active === item && (
+          {active === item && children && (
             <div className="absolute top-[calc(100%_+_1.2rem)] left-1/2 transform -translate-x-1/2 pt-4">
               <motion.div
                 transition={transition}
